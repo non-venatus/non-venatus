@@ -740,6 +740,10 @@ strong { font-weight: 600; color: var(--white); }
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.75;
 }
 .quote-mark-close {
   display: block;
@@ -785,8 +789,8 @@ strong { font-weight: 600; color: var(--white); }
   margin-bottom: 1.25rem;
 }
 .quote-modal-body blockquote {
-  font-family: var(--font-elegant);
-  font-size: 1.1rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.21rem;
   font-style: italic;
   color: var(--smoke);
   line-height: 1.85;
