@@ -5,22 +5,24 @@
 # =====================================================
 
 quotes:
-  - name: "Abdullah Öcalan"
-    title: "Kurdish Political Leader and Philosopher"
-    institution: ""
-    text: "A courageous work that names the violence hidden within academic institutions and proposes genuine paths of escape."
+  - name: "Brian Massumi"
+    title: "Author of 'Personality of Power: A Theory of Fascism for Anti-fascist Life', and Professor"
+    institution: "Department of Communication, Université de Montréal"
+    text: "Venatus: the hunt. Capture, appropriation, control. In the extreme, war. Hidam Premananda investigates the role of abstraction in the production and maintenance of formations of power on the prowl. Non-venatus: escape. Every exercise of power opens an avenue for it. Counter-abstraction. Figures of creative escape proliferate through the book, mounting a conceptual counter-war machine. Non-Venatus: On the Production of Wars and Universities develops an original analysis of domination and its undoing, for a “peace nomadology.”
 
-  - name: "Academic Reviewer"
-    title: "Professor of Political Philosophy"
-    institution: "Jawaharlal Nehru University"
-    text: "Non-Venatus is a rare intervention — it refuses both the comfort of critique and the paralysis of despair. Premananda gives us a fugitive methodology for thinking peace."
 
-  - name: "Scholar"
-    title: "Author and Political Theorist"
-    institution: "University of Delhi"
+  - name: "Mehrdad Vahabi"
+    title: "Author of 'Political Economy of Predation: Manhunting and the Economics of Escape', and Professor"
+    institution: "Economics, University of Sorbonne Nord"
+    text: "In Non-Venatus, Praem Hidam investigates different modes of escape from predatory relationships. The book's originality lies in its insistence that stateless fugitives require a liberating culture and a new form of education—one capable of reinventing an imaginative, multiple, and wandering communal life through a speculative, imaginative history independent of official narratives. Hidam identifies three techniques of liberation: speculative history, talestrial practice, and the disestablishment of war. Adopting a revolutionary perspective, the author recalls Antonio Negri’s argument that questions of identity for stateless people are only a beginning; what truly enables the construction of a sovereign people—as a “multitude” or community—is the self-abolition of fixed identity.”
+"
+
+  - name: "Soumyabrata Choudhury"
+    title: "Author of 'Ambedkar and Other Immortals: An Untouchable Research Programme', and Professor"
+    institution: "School of Arts and Aesthetics, JNU"
     text: "This book does something genuinely difficult: it builds an escape route from within the very structures it dismantles. An essential read for anyone thinking about fascism, knowledge, and resistance."
 
-  - name: "Reviewer"
-    title: "Researcher in Postcolonial Studies"
-    institution: ""
-    text: "Premananda's concept of venatus gives us a new vocabulary for understanding how universities become instruments of war. A necessary, urgent book."
+  - name: "Saikat Ghose"
+    title: "Co-editor of 'Horror Fiction in the Global South', and Associate Professor"
+    institution: "Department of English, SGTB Khalsa College, University of Delhi"
+    text: "Praem Hidam’s Non-Venatus is a theoretical tour de force that critiques the predatory nature of Knowledge-driven systems and how these systems work through orders of abstraction and models of pedagogy that undermine, marginalise or exclude concrete experiential engagements with the world. It examines the Nexus between power, discursive formations, epistemologies and institutional practices pertaining to education in societies that subject their populations to technological control and data-driven agendas under the guise of secular emancipatory ideals that promote false narratives of choice."
