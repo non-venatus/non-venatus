@@ -28,9 +28,14 @@ title: Home
     <!-- Clickable cover thumbnail -->
     <div class="hero__cover reveal">
       <div class="hero__cover-wrap">
-        <button class="cover-thumb-btn" id="openCoverModal" aria-label="Click to enlarge book cover">
-          <img src="/img/cover-thumb.jpg" alt="Non-Venatus book cover by Hidam Premananda">
-        </button>
+        <div class="hero__cover-flipper" id="openCoverModal" role="button" tabindex="0" aria-label="Click to enlarge book cover">
+          <div class="hero__cover-front">
+            <img src="/img/cover-thumb.jpg" alt="Non-Venatus front cover">
+          </div>
+          <div class="hero__cover-back">
+            <img src="/img/cover-back-thumb.jpg" alt="Non-Venatus back cover">
+          </div>
+        </div>
         <div class="hero__author-ring">
           <img src="/img/author-thumb.jpg" alt="Hidam Premananda">
         </div>
