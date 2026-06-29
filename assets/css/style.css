@@ -1185,13 +1185,17 @@ strong { font-weight: 600; color: var(--white); }
 
   .nav__links {
      display: flex;
-     gap: 0.15rem;
+     gap: 0.1rem;
    }
    .nav__links a {
-     font-size: 0.75rem;
-     padding: 0.4rem 0.6rem;
+     font-size: 0.68rem;
+     padding: 0.35rem 0.45rem;
+     letter-spacing: 0;
    }
    .nav__toggle { display: none; }
+   .nav__brand {
+     font-size: 0.85rem;
+   }
 
   .sidebar        { display: none; }
   .page-wrapper   { display: block; }
