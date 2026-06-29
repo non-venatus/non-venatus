@@ -201,6 +201,9 @@ strong { font-weight: 600; color: var(--white); }
   display: flex;
   min-height: 100vh;
   padding-top: var(--nav-h);
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 /* ── Sidebar ──────────────────────────────────────────────── */
