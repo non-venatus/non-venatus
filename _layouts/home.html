@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include nav.html %}
+  <main class="home-page" id="main">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  <script src="{{ site.baseurl }}/assets/js/config.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/app.js"></script>
+</body>
+</html>

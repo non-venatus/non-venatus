@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include nav.html %}
+
+  <div class="page-wrapper">
+    {% include sidebar.html %}
+    <main class="main-content" id="main">
+      {{ content }}
+    </main>
+  </div>
+
+  {% include footer.html %}
+
+  <script src="{{ site.baseurl }}/assets/js/config.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/app.js"></script>
+  {% if page.extra_js %}
+  <script src="{{ site.baseurl }}/assets/js/{{ page.extra_js }}"></script>
+  {% endif %}
+</body>
+</html>
