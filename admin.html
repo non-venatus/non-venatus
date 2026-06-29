@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — Non-Venatus</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    /* Admin-only extra styles */
+    .admin-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .stat-card {
+      background: var(--ink-2);
+      border: 1px solid rgba(30,125,142,.14);
+      border-radius: 10px;
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .stat-card__num {
+      font-size: 2rem;
+      font-family: var(--font-display);
+      font-weight: 700;
+      display: block;
+    }
+    .stat-card__label {
+      font-size: 0.78rem;
+      color: var(--silver);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .stat-card.pending  .stat-card__num { color: var(--gold); }
+    .stat-card.approved .stat-card__num { color: var(--green); }
+    .stat-card.rejected .stat-card__num { color: var(--red); }
+    .login-error {
+      color: var(--red);
+      font-size: 0.85rem;
+      margin-top: 0.75rem;
+      display: none;
+    }
+    .admin-comment__email {
+      font-size: 0.75rem;
+      color: var(--silver);
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <!-- Nav (simplified, no Jekyll) -->
+  <nav class="nav">
+    <a href="/" class="nav__brand"><em>Non-Venatus</em></a>
+    <ul class="nav__links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/engagements.html">Engagements</a></li>
+      <li><a href="/interactions.html">Interactions</a></li>
+      <li><a href="/about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="admin-page">
+
+    <!-- ── Login Screen ───────────────────────────────────────── -->
+    <div class="admin-login" id="adminLogin">
+      <div class="admin-login-box">
+        <span class="eyebrow">Moderator Access</span>
+        <h2>Admin Dashboard</h2>
+        <p style="font-size:0.88rem; color:var(--silver); margin-bottom:1.5rem;">
+          Manage comment submissions for <em>Non-Venatus</em> Interactions page.
+        </p>
+        <div class="form-field" style="margin-bottom:1rem;">
+          <label for="adminPass">Password</label>
+          <input type="password" id="adminPass" placeholder="Enter admin password" autocomplete="current-password">
+        </div>
+        <button class="btn btn-primary" id="loginBtn" style="width:100%;">Sign In</button>
+        <p class="login-error" id="loginError">Incorrect password. Please try again.</p>
+        <p style="font-size:0.75rem; color:var(--silver); margin-top:1.25rem;">
+          ⚙ Set password in <code style="background:rgba(0,0,0,.3); padding:0.1rem 0.35rem; border-radius:3px; font-size:0.85em;">assets/js/config.js</code>
+        </p>
+      </div>
+    </div>
+
+    <!-- ── Dashboard (hidden until login) ────────────────────── -->
+    <div class="admin-dashboard" id="adminDashboard" style="display:none;">
+
+      <div class="admin-header">
+        <div>
+          <span class="eyebrow">Moderation Panel</span>
+          <h1>Comment Dashboard</h1>
+        </div>
+        <button class="btn btn-outline" id="logoutBtn">Sign Out</button>
+      </div>
+
+      <!-- Setup warning (shown until Supabase is configured) -->
+      <div class="setup-warning" id="setupWarning" style="display:none;">
+        ⚠ <strong>Setup required:</strong> Supabase is not configured. Open
+        <code>assets/js/config.js</code> and set your <code>SUPABASE_URL</code> and
+        <code>SUPABASE_SERVICE_KEY</code>. See <a href="#" style="color:var(--gold);">README.md</a>
+        for full setup instructions.
+      </div>
+
+      <!-- Stats row -->
+      <div class="admin-stats">
+        <div class="stat-card pending">
+          <span class="stat-card__num" id="statPending">—</span>
+          <span class="stat-card__label">Pending</span>
+        </div>
+        <div class="stat-card approved">
+          <span class="stat-card__num" id="statApproved">—</span>
+          <span class="stat-card__label">Approved</span>
+        </div>
+        <div class="stat-card rejected">
+          <span class="stat-card__num" id="statRejected">—</span>
+          <span class="stat-card__label">Rejected</span>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="admin-tabs" role="tablist">
+        <button class="admin-tab active" data-tab="pending" role="tab">
+          Pending <span class="tab-badge yellow" id="badgePending">0</span>
+        </button>
+        <button class="admin-tab" data-tab="approved" role="tab">
+          Approved <span class="tab-badge green" id="badgeApproved">0</span>
+        </button>
+        <button class="admin-tab" data-tab="rejected" role="tab">
+          Rejected <span class="tab-badge red" id="badgeRejected">0</span>
+        </button>
+      </div>
+
+      <!-- Tab panels -->
+      <div id="tabPending"  class="tab-panel">
+        <div id="listPending"><div class="spinner"></div></div>
+      </div>
+      <div id="tabApproved" class="tab-panel" style="display:none;">
+        <div id="listApproved"><div class="spinner"></div></div>
+      </div>
+      <div id="tabRejected" class="tab-panel" style="display:none;">
+        <div id="listRejected"><div class="spinner"></div></div>
+      </div>
+
+    </div><!-- /admin-dashboard -->
+  </div><!-- /admin-page -->
+
+  <!-- Supabase SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/assets/js/config.js"></script>
+  <script src="/assets/js/app.js"></script>
+  <script src="/assets/js/admin.js"></script>
+</body>
+</html>

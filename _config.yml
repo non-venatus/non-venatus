@@ -1,0 +1,29 @@
+title: "Non-Venatus"
+subtitle: "On the Production of Wars and Universities"
+author: "Hidam Premananda"
+publisher: "Bloomsbury"
+year: "2026"
+isbn: "978-93-69526-47-5"
+description: "A manifesto for exploring Non-Venatus Studies — an escape plan from the institutional order of fascism in its various forms."
+contact_email: "readactsessions@gmail.com"
+baseurl: ""
+url: ""
+
+# Navigation links
+nav_links:
+  - title: "Home"
+    url: "/"
+  - title: "Engagements"
+    url: "/engagements.html"
+  - title: "Interactions"
+    url: "/interactions.html"
+  - title: "About"
+    url: "/about.html"
+
+# Build settings
+markdown: kramdown
+plugins: []
+exclude:
+  - README.md
+  - "*.sh"
+  - node_modules/
