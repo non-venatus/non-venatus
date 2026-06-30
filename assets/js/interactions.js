@@ -47,7 +47,6 @@
       const { data, error } = await supabase
         .from('comments')
         .select('id, name, affiliation, comment, created_at')
-        .eq('status', 'approved')
         .order('created_at', { ascending: false });
 
       if (error) throw error;
@@ -150,7 +149,7 @@
     try {
       const { error } = await supabase
         .from('comments')
-        .insert([{ name, email, affiliation: aff || null, comment, status: 'pending' }]);
+        .insert([{ name, email, affiliation: aff || null, comment, status: 'approved' }]);
 
       if (error) throw error;
 
