@@ -1219,6 +1219,9 @@ strong { font-weight: 600; color: var(--white); }
 }
 .footer__bottom a { color: var(--silver); }
 .footer__bottom a:hover { color: var(--teal-glow); }
+.footer__bottom span:last-child {
+  font-size: 0.65rem;
+}
 
 /* ── Animations ───────────────────────────────────────────── */
 @keyframes fadeIn  { from { opacity: 0; } to { opacity: 1; } }
