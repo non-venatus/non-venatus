@@ -20,7 +20,7 @@ const CONFIG = {
   // ── Supabase ──────────────────────────────────────────────────
   // Get these from: Supabase → Settings → API
   supabase: {
-    url:            'https://rwmobytwkobejjlibatn.supabase.co/rest/v1/',      // e.g. https://xxxx.supabase.co
+    url:            'https://rwmobytwkobejjlibatn.supabase.co',      // e.g. https://xxxx.supabase.co
     anonKey:        'sb_publishable_83ZPlmqlXCkHiJ-fYquQDQ_FOazw7oc',          // Safe to expose (RLS protects data)
     serviceRoleKey: 'placeholder'  // Admin only — keep secret!
   },
