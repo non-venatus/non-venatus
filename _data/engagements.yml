@@ -13,17 +13,18 @@ events:
     short_desc: "Open Panel on Diagrammatic Techniques in Research"
     image: "img/4S-toronto.png"
     popup_text: >
-      We are hosting an open panel at 4S'26 happening in Toronto in October. We have received
+      We are hosting an open panel at 4S'26 happening in Toronto in October. We will be discussing themes
+      from Non-Venatus, especially the section on diagrammatic techniques for research. We have received
       submissions from other researchers experimenting with co-design and participatory design
-      in their works. We are hoping to exchange lessons from the field when the researcher-participant
-      relationship is reflected upon to decenter epistemic power.
+      in their works. We are hoping to exchange lessons from the field where the researcher-participant
+      relationship is reflected upon to decenter epistemic power and co-create knowledge.
     tags: ["4S", "Panel"]
 
   - id: "launch-delhi"
     title: "Book Launch — Delhi"
-    date: "July 2026"
-    venue: "India International Centre, New Delhi"
-    short_desc: "Official launch of Non-Venatus with panel discussion"
+    date: "August 2026"
+    venue: "New Delhi"
+    short_desc: "Official launch of Non-Venatus"
     image: "img/event-placeholder.jpg"
     popup_text: >
       The official launch event for Non-Venatus: On the Production of Wars and Universities 
@@ -32,7 +33,7 @@ events:
       The author Hidam Premananda was joined by academics from University of Delhi and 
       Jawaharlal Nehru University to discuss the key concepts of the book, including 
       venatus, Non-Venatus Studies, and peace nomadology.
-    tags: ["Launch", "Panel Discussion"]
+    tags: ["Book Launch"]
 
   - id: "bloomsbury-talk"
     title: "Bloomsbury Author Talk"
