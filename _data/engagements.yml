@@ -6,6 +6,19 @@
 # =====================================================
 
 events:
+  - id: "panel-1"
+    title: "4S Panel- Toronto"
+    date: "October 2026"
+    venue: "Society for Social Studies of Science (4S) Conference, 2026 - Toronto"
+    short_desc: "Open Panel on Diagrammatic Techniques in Research"
+    image: "img/4S-toronto.jpg"
+    popup_text: >
+      We are hosting an open panel at 4S'26 happening in Toronto in October. We have received
+      submissions from other researchers experimenting with co-design and participatory design
+      in their works. We are hoping to exchange lessons from the field when the researcher-participant
+      relationship is reflected upon to decenter epistemic power.
+    tags: ["4S", "Toronto", "Panel"]
+
   - id: "launch-delhi"
     title: "Book Launch — Delhi"
     date: "July 2026"
@@ -49,16 +62,15 @@ events:
       the book's proposals for fugitive thinking.
     tags: ["Reading Group", "Community"]
 
-  - id: "international-seminar"
-    title: "International Seminar on Fascism and Knowledge"
-    date: "October 2026"
-    venue: "TBA"
-    short_desc: "Keynote presentation at an international academic seminar"
-    image: "img/event-placeholder.jpg"
+  - id: "workshop-1"
+    title: "Diagrammatic Techniques in Research (Workshop)"
+    date: "December 2025"
+    venue: "IIT-Delhi / OP Jindal Global University"
+    short_desc: "Research workshop at the STS India Network Conference 2025"
+    image: "img/sts-workshop.jpg"
     popup_text: >
-      Hidam Premananda presented the core arguments of Non-Venatus at an international 
-      seminar on fascism, knowledge production, and resistance. The presentation 
-      introduced the concept of venatus to an international audience of scholars 
-      and provoked discussion about the complicity of universities in producing 
-      the conditions for war and authoritarian governance.
-    tags: ["Keynote", "International"]
+      We presented the diagrammatic technique for research proposed in the book- Non-Venatus. The participants
+      actively contributed to the engagement by contextualizing the propositions in their
+      own research works. We plan to re-convene after the book launch in August 2026 to discuss
+      the progres with the participants and formulate a long-term plan for enaggement.
+    tags: ["Workshop", "STS", "Diagrammatic Technique"]
